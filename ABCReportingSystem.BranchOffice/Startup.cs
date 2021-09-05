@@ -28,6 +28,11 @@ namespace ABCReportingSystem.BranchOffice
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
+
+            services.AddScoped<IBranchOfficeRepository, BranchOfficeRepository>();
+            services.AddScoped<IAutomobileRepository, AutomobileRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
             services.AddControllers();
         }
 
