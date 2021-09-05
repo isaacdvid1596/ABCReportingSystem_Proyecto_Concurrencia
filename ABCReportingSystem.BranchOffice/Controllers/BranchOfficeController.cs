@@ -11,6 +11,7 @@ namespace ABCReportingSystem.BranchOffice.Controllers
     [Route("[controller]")]
     public class BranchOfficeController : ControllerBase
     {
-        
+        [HttpGet]
+        public async Task<ActionResult<>>
     }
 }
