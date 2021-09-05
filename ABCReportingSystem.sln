@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCReportingSystem.BranchOffice", "ABCReportingSystem.BranchOffice\ABCReportingSystem.BranchOffice.csproj", "{05AD33FE-CE0C-41EB-BEA5-B4926E86899A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05AD33FE-CE0C-41EB-BEA5-B4926E86899A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AD33FE-CE0C-41EB-BEA5-B4926E86899A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AD33FE-CE0C-41EB-BEA5-B4926E86899A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AD33FE-CE0C-41EB-BEA5-B4926E86899A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A910B04-0CAE-4FCE-856D-9F19A2F43B7E}
+	EndGlobalSection
+EndGlobal
