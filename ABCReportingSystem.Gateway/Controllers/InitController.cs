@@ -2,9 +2,13 @@
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using System.Threading.Tasks;
 using ABCReportingSystem.Gateway.Models;
+using RabbitMQ.Client;
 
 namespace ABCReportingSystem.Gateway.Controllers
 {
@@ -43,11 +47,42 @@ namespace ABCReportingSystem.Gateway.Controllers
             }
         };
 
-
         [HttpGet]
         public ActionResult<Transaction> Get()
         {
-            return Ok(Transactions);
+
+            var transaction = Transactions;
+            Transaction body = null;
+
+            foreach (var t in transaction)
+            {
+                body = t;
+            }
+
+            var binFormatter = new BinaryFormatter();
+            var mStream = new MemoryStream();
+            binFormatter.Serialize(mStream,body);
+            var transac = mStream.ToArray();
+                
+            try
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672 };
+
+                using (var connection = factory.CreateConnection())
+                {
+                    using (var channel = connection.CreateModel())
+                    {
+                        channel.QueueDeclare("transaction", false, false, false, null);
+                        channel.BasicPublish(string.Empty,"transaction",null,transac);
+                    }
+                }
+
+                return Ok(transaction);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
     }

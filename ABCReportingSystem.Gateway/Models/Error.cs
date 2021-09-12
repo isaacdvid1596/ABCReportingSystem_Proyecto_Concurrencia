@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace ABCReportingSystem.Gateway.Models
 {
+    [Serializable]
     public class Error
     {
         public int ErrorId { get; set; }

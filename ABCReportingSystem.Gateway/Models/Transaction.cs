@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 
 namespace ABCReportingSystem.Gateway.Models
 {
+
+    [Serializable]
     public class Transaction
     {
         public Guid TransactionId { get; set; }
