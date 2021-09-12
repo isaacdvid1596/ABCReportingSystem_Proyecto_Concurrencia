@@ -9,6 +9,8 @@ namespace ABCReportingSystem.BranchOffice.Models
     {
         public Guid AutomobileId { get; set; }
 
+        public Guid Vin { get; set; }
+
         public string Make{ get; set; }
 
         public string Model { get; set; }

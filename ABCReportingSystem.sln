@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABCReportingSystem.BranchOffice", "ABCReportingSystem.BranchOffice\ABCReportingSystem.BranchOffice.csproj", "{05AD33FE-CE0C-41EB-BEA5-B4926E86899A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCReportingSystem.RecollectorService", "ABCReportingSystem.ValidationService\ABCReportingSystem.RecollectorService.csproj", "{01D35076-3549-4E6E-8731-0A41B40EACFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABCReportingSystem.RecollectorService", "ABCReportingSystem.ValidationService\ABCReportingSystem.RecollectorService.csproj", "{01D35076-3549-4E6E-8731-0A41B40EACFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCReportingSystem.Gateway", "ABCReportingSystem.Gateway\ABCReportingSystem.Gateway.csproj", "{BCA97B14-8181-4D07-95AA-3E6A3CF3B53A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{01D35076-3549-4E6E-8731-0A41B40EACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01D35076-3549-4E6E-8731-0A41B40EACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01D35076-3549-4E6E-8731-0A41B40EACFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA97B14-8181-4D07-95AA-3E6A3CF3B53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA97B14-8181-4D07-95AA-3E6A3CF3B53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA97B14-8181-4D07-95AA-3E6A3CF3B53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA97B14-8181-4D07-95AA-3E6A3CF3B53A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
