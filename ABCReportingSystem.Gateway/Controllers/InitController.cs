@@ -61,7 +61,7 @@ namespace ABCReportingSystem.Gateway.Controllers
 
             var binFormatter = new BinaryFormatter();
             var mStream = new MemoryStream();
-            binFormatter.Serialize(mStream,body);
+            binFormatter.Serialize(mStream,body.TransactionId);
             var transac = mStream.ToArray();
                 
             try
@@ -77,7 +77,7 @@ namespace ABCReportingSystem.Gateway.Controllers
                     }
                 }
 
-                return Ok(transaction);
+                return Ok(body.TransactionId);
             }
             catch (Exception e)
             {
