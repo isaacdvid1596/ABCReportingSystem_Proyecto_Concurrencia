@@ -24,17 +24,22 @@ namespace ABCReportingSystem.Gateway.Controllers
             new Error()
             {
                 ErrorId = 1,
-                Description = "Error 1"
+                Description = "El empleado no existe en la sucursal"
             },
             new Error()
             {
                 ErrorId = 2,
-                Description = "Error 2"
+                Description = "El auto no existe en la sucursal"
             },
             new Error()
             {
                 ErrorId = 3,
-                Description = "Error 3"
+                Description = "El VIN del auto no es valido"
+            },
+            new Error()
+            {
+                ErrorId = 4,
+                Description = "El apellido y ID del comprador esta vacio"
             }
         };
 
@@ -42,7 +47,7 @@ namespace ABCReportingSystem.Gateway.Controllers
         {
             new Transaction()
             {
-                TransactionId = new Guid("1e8adbf8-1109-4f3e-bb2e-0bf278259022"),
+                TransactionId = Guid.NewGuid(),
                 Errors = Errors
             }
         };
