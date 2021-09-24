@@ -58,7 +58,7 @@ namespace ABCReportingSystem.BranchOffice.Controllers
                 return NotFound($"Username with username {employeeUsername} not found");
             }
 
-            return result;
+            return Ok(result);
         }
     }
 }
